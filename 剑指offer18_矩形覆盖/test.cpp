@@ -21,6 +21,9 @@ public:
 };
 
 void TestFunc(){
+	Solution s;
+	auto temp=s.rectCover(4);
+	cout << temp << endl;
 
 }
 
