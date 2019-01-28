@@ -21,26 +21,34 @@ using namespace std;
 //};
 
 
-int rectCover(int number) {
-	if (number ==1||number==2) {
-		return number;
+//int rectCover(int number) {
+//	if (number ==1||number==2) {
+//		return number;
+//	}
+//	return (rectCover(number - 1) + rectCover(number - 2));
+//}
+//
+//void TestFunc(){
+//	int temp=rectCover(4);
+//	cout << temp << endl;
+//}
+
+class Solution {
+public:
+	int rectCover(int number) {
+		if (number == 1 || number == 2) {
+			return number;
+		}
+		return (rectCover(number - 1) + rectCover(number - 2));
 	}
-	return (rectCover(number - 1) + rectCover(number - 2));
-}
+};
 
 void TestFunc(){
-	int temp=rectCover(4);
+	Solution s;
+	auto temp=s.rectCover(4);
 	cout << temp << endl;
+
 }
-
-
-
-//void TestFunc(){
-//	Solution s;
-//	auto temp=s.rectCover(4);
-//	cout << temp << endl;
-//
-//}
 
 int main(){
 	TestFunc();
